@@ -83,7 +83,6 @@ private fun ParticleObject.animate(
     progress: Float,
     size: Size
 ) {
-    println("Animating the value")
 
     val centerX = size.width / 2
     val centerY = size.height / 2
@@ -128,10 +127,9 @@ private fun ParticleObject.animate(
 }
 
 private fun ParticleObject.drawOnCanvas(paint: Paint, canvas: Canvas) {
-    println("Drawing into canvas")
     canvas.apply {
         paint.color = animationParams.currentColor
-        paint.alpha = animationParams.alpha
+        //paint.alpha = animationParams.alpha
         val centerW = animationParams.locationX.value
         val centerH = animationParams.locationY.value
         if (animationParams.isFilled) {
